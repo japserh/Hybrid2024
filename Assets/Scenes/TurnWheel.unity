@@ -426,7 +426,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4697117822032319731
+--- !u!1001 &2143213380
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -434,6 +434,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: lerpFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5420740650848201921, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
       propertyPath: m_Name
       value: TurnWheel
@@ -490,4 +494,4 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 4697117822032319731}
+  - {fileID: 2143213380}
