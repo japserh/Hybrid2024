@@ -1,10 +1,15 @@
+using System;
 using UnityEngine;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class SerialRotator : SerialReader
 {
-    private string rotation_prefix = "pos:";
-    private string direction_prefix = "dir:";
+    public int rotationSteps = 40;
+    public float lerpFactor = 0.1f;
+    
+    private readonly string rotation_prefix = "pos:";
+    private readonly string direction_prefix = "dir:";
     
     private int rotation;
     private int direction;
@@ -25,14 +30,18 @@ public class SerialRotator : SerialReader
         }
         
         // 20 step Rotary Encoder
-        rotation = pos * 18;
+        rotation = pos * (360 / rotationSteps);
         direction = dir;
+    }
 
-        SetRotation(rotation);
+    private void LateUpdate()
+    {
+        SetRotation(rotation);  
     }
 
     private void SetRotation(int rotation)
     {
-        gameObject.transform.rotation = Quaternion.Euler(0, rotation, 0);
+        var target = Quaternion.Euler(0, rotation, 0);
+        gameObject.transform.localRotation = Quaternion.Lerp(gameObject.transform.localRotation, target, lerpFactor);
     }
 }
