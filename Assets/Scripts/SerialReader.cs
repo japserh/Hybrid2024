@@ -40,6 +40,7 @@ public class SerialReader : MonoBehaviour
                 Debug.Log("Serial Received:" + message);
                 newMessage.Invoke();
 				lastMessage = message;
+                HandleMessage(lastMessage);
             }
         }
     }
@@ -47,5 +48,10 @@ public class SerialReader : MonoBehaviour
     public string GetLastMessage()
     {
         return message;
+    }
+
+    public virtual void HandleMessage(string message)
+    {
+        return;
     }
 }
