@@ -7,6 +7,7 @@ public class RotationFollower : MonoBehaviour
     public float multiplier = 1;
     private Vector3 position;
 
+
     // Update is called once per frame
     void Update()
     {

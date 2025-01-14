@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEngine.Windows;
 
 public class SerialRotator : SerialReader
 {
@@ -32,6 +33,18 @@ public class SerialRotator : SerialReader
         // 20 step Rotary Encoder
         rotation = pos * (360 / rotationSteps);
         direction = dir;
+    }
+
+    void FixedUpdate()
+    {
+        if(UnityEngine.Input.GetKey(KeyCode.RightArrow))
+        {
+            rotation += 1;
+        }
+        else if (UnityEngine.Input.GetKey(KeyCode.LeftArrow))
+        {
+            rotation -= 1;
+        }
     }
 
     private void LateUpdate()
