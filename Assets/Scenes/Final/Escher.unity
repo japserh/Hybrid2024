@@ -6620,6 +6620,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe063dceeea416489d765c92b1c60b2, type: 3}
+--- !u!1 &468923955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3050333663169518162, guid: abe063dceeea416489d765c92b1c60b2, type: 3}
+  m_PrefabInstance: {fileID: 468923954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &471192395
 GameObject:
   m_ObjectHideFlags: 0
@@ -13909,7 +13914,7 @@ PrefabInstance:
     - target: {fileID: 6936817355264104113, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 468923955}
     - target: {fileID: 8023052047057127775, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.35
@@ -27320,7 +27325,7 @@ PrefabInstance:
     - target: {fileID: 6936817355264104113, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 468923955}
     - target: {fileID: 6936817355264104113, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: multiplier
       value: 1
@@ -27584,7 +27589,7 @@ PrefabInstance:
     - target: {fileID: 6936817355264104113, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 468923955}
     - target: {fileID: 8023052047057127775, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.06
@@ -30790,7 +30795,7 @@ PrefabInstance:
     - target: {fileID: 6936817355264104113, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 468923955}
     - target: {fileID: 8023052047057127775, guid: d1566cd59efa4e845b517a9fac9bdee1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.1738315
