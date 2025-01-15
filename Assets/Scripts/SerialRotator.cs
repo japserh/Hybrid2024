@@ -8,12 +8,15 @@ public class SerialRotator : SerialReader
 {
     public int rotationSteps = 40;
     public float lerpFactor = 0.1f;
+    //[HideInInspector]
+    public int openRotation = 0;
     
     private readonly string rotation_prefix = "pos:";
     private readonly string direction_prefix = "dir:";
     
     private int rotation;
     private int direction;
+
     
     public override void HandleMessage(string message)
     {
@@ -33,6 +36,7 @@ public class SerialRotator : SerialReader
         // 20 step Rotary Encoder
         rotation = pos * (360 / rotationSteps);
         direction = dir;
+        openRotation += dir;
     }
 
     void FixedUpdate()
@@ -40,16 +44,18 @@ public class SerialRotator : SerialReader
         if(UnityEngine.Input.GetKey(KeyCode.RightArrow))
         {
             rotation += 1;
+            openRotation += 1;
         }
         else if (UnityEngine.Input.GetKey(KeyCode.LeftArrow))
         {
             rotation -= 1;
+            openRotation -= 1;
         }
     }
 
     private void LateUpdate()
     {
-        SetRotation(rotation);  
+        SetRotation(rotation);
     }
 
     private void SetRotation(int rotation)
