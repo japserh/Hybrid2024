@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 
 
@@ -16,6 +17,7 @@ public class LaserScript : MonoBehaviour
 
     private Ray ray;
 
+    public bool goalHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -55,10 +57,14 @@ public class LaserScript : MonoBehaviour
             }
             else
             {
-                if(Physics.Raycast(ray.origin, ray.direction, out hit, defaultLength, goalMask))
+                if (Physics.Raycast(ray.origin, ray.direction, out hit, defaultLength, goalMask))
                 {
-                    Debug.Log("DISPLAY CODE");
+                    goalHit = true;
                     remainLength = hit.distance;
+                }
+                else
+                {
+                    goalHit = false;
                 }
                 _lineRenderer.positionCount += 1;
                 _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, ray.origin + (ray.direction * remainLength));
