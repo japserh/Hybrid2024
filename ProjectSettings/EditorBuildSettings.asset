@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tests/EscherDavid.unity
     guid: 8ea0e0b69a962cd4daffcca66788025f
   - enabled: 0
-    path: Assets/Scenes/ClownScene.unity
+    path: Assets/Scenes/Tests/ClownScene.unity
     guid: fa9413c6d20bea945901e11de0dfc18a
   - enabled: 1
     path: Assets/Scenes/Final/Escher.unity
