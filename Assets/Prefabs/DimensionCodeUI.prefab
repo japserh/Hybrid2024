@@ -115,9 +115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1562811bb3a289756813dabc51a13309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeDigits: 3
   dimensions:
-  - code: 123456
-    scenePath: Assets/Scenes/SampleScene.unity
+  - code: 123
+    scenePath: Assets/Scenes/Final/Clown.unity
+  - code: 456
+    scenePath: Assets/Scenes/Final/Escher.unity
   codeText: {fileID: 4850453655345113497}
 --- !u!1 &6417143689695933827
 GameObject:
