@@ -117,10 +117,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeDigits: 3
   dimensions:
-  - code: 123
+  - code: 563
     scenePath: Assets/Scenes/Final/Clown.unity
-  - code: 456
+  - code: 123
     scenePath: Assets/Scenes/Final/Escher.unity
+  - code: 000
+    scenePath: Assets/Scenes/Final/Intro.unity
   codeText: {fileID: 4850453655345113497}
 --- !u!1 &6417143689695933827
 GameObject:

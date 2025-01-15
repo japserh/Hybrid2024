@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final/Clown.unity
     guid: d11085750fded744aa668a9b265e74e5
+  - enabled: 1
+    path: Assets/Scenes/Final/Intro.unity
+    guid: b73d8cd2ffb483a40bb9ecf539e12119
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 73de64b3659f49c40abde6d82ecb2be1, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
