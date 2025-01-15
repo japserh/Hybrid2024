@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 [Serializable]
 public struct Dimension {
-    [Tooltip("6 digit code")]
+    [Tooltip("Code")]
     public string code;
     [Tooltip("Path to scene file")]
     public string scenePath;
@@ -15,6 +15,7 @@ public class DimensionCodeUI : MonoBehaviour
 {
     private string code = "";
 
+    public int codeDigits = 3;
     public Dimension[] dimensions;
     public TMPro.TextMeshProUGUI codeText;
 
@@ -39,8 +40,8 @@ public class DimensionCodeUI : MonoBehaviour
     void OnDigitPress(int digit) {
         code += digit.ToString();
         codeText.text = code;
-        // If code is 6 digits long, check if it matches any dimension to switch to
-        if (code.Length >= 6) {
+        // If code is right amount of digits, check if it matches any dimension to switch to
+        if (code.Length >= codeDigits) {
             foreach (Dimension dimension in dimensions) {
                 if (dimension.code == code) {
                     Debug.Log("Loading scene: " + dimension.scenePath);
