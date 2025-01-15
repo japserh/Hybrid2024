@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class SmoothMovement : MonoBehaviour
 {
+    public Transform target;
     public float positionSmoothing = .5f;
     public float rotationSmoothing = .5f;    
-        
-    private Transform parent;
     
     private Vector3 oldPosition;
     private Vector3 targetPosition;
@@ -16,15 +15,14 @@ public class SmoothMovement : MonoBehaviour
     
     private void Start()
     {
-        parent = transform.parent;
-        oldPosition = parent.position;
-        oldRotation = parent.rotation;
+        oldPosition = target.position;
+        oldRotation = target.rotation;
     }
 
     void Update()
     {
-        targetPosition = parent.position;
-        targetRotation = parent.rotation;
+        targetPosition = target.position;
+        targetRotation = target.rotation;
 
         var newPosition = Vector3.Lerp(oldPosition, targetPosition, positionSmoothing);
         var newRotation = Quaternion.Lerp(oldRotation, targetRotation, rotationSmoothing);
