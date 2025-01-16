@@ -50,7 +50,7 @@ public class DimensionCodeUI : MonoBehaviour
                 }
             }
             code = "";
-            codeText.text = "Invalid Code";
+            codeText.text += "\n Invalid Code";
             Invoke("ClearText", 1);
         }
     }
